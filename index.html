@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Binary Converter App</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='App.css'>
+</head>
+
+<body>
+    <header class="header">
+        <h2>MATH<span>.guru</span></h2>
+        <div class="buttons">
+            <button id="home-btn">HOME</button>
+            <button id="binary-btn">BINARY</button>
+            <button id="decimal-btn">DECIMAL</button>
+        </div>
+    </header>
+
+    <h1 class="heading">Binary Converter</h1>
+
+    <main class="app">
+        <div class="arithmatic" id="arithmatic">
+            <h3>Binary Calculation—Add, Subtract, Multiply, or Divide</h3>
+            <p>Enter binary numbers to perform calculations.</p>
+            <input type="text" id="binary-input" placeholder="Enter binary number">
+            <select name="options" id="">
+                <option value="Subtract">-</option>
+                <option value="Add">+</option>
+                <option value="Multiply">*</option>
+                <option value="Divide">/</option>
+            </select>
+            <input type="text" id="binary-input2" placeholder="Enter another binary number">
+            <button>Convert</button>
+            <textarea name="result" id="result"></textarea>
+        </div>
+
+        <div class="binary" id="binary">
+            <h3>Binary to Decimal convertion</h3>
+            <p>Enter a binary number:</p>
+            <input type="text" id="binary-to-decimal-input" placeholder="Enter binary number">
+            <button>Convert</button>
+            <textarea name="result" id="result"></textarea>
+        </div>
+
+        <div class="decimal" id="decimal">
+            <h3>Decimal to Binary convertion</h3>
+            <p>Enter a decimal number:</p>
+            <input type="text" id="decimal-to-binary-input" placeholder="Enter decimal number">
+            <button>Convert</button>
+            <textarea name="result" id="result"></textarea>
+        </div>
+
+    </main>
+
+    <script src="App.js"></script>
+</body>
+
+</html>
