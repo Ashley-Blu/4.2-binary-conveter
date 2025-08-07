@@ -1,57 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Binary Converter App</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='App.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="App.css" />
 </head>
 
 <body>
     <header class="header">
         <h2>MATH<span>.guru</span></h2>
         <div class="buttons">
-            <button id="home-btn">HOME</button>
-            <button id="binary-btn">BINARY</button>
-            <button id="decimal-btn">DECIMAL</button>
+            <button id="home-btn" type="button">ASCII</button>
+            <button id="binary-btn" type="button">BINARY</button>
+            <button id="decimal-btn" type="button">DECIMAL</button>
         </div>
     </header>
 
     <h1 class="heading">Binary Converter</h1>
 
     <main class="app">
-        <div class="arithmatic" id="arithmatic">
+        <section class="arithmetic" id="arithmetic">
             <h3>Binary Calculation—Add, Subtract, Multiply, or Divide</h3>
             <p>Enter binary numbers to perform calculations.</p>
-            <input type="text" id="binary-input" placeholder="Enter binary number">
-            <select name="options" id="">
-                <option value="Subtract">-</option>
-                <option value="Add">+</option>
-                <option value="Multiply">*</option>
-                <option value="Divide">/</option>
+
+            <label for="binary-input1">Binary Number 1:</label>
+            <input type="text" id="binary-input1" placeholder="Enter binary number" pattern="[01]*" />
+
+            <label for="operation-select">Operation:</label>
+            <select name="options" id="operation-select">
+                <option value="add">+</option>
+                <option value="subtract">-</option>
+                <option value="multiply">*</option>
+                <option value="divide">/</option>
             </select>
-            <input type="text" id="binary-input2" placeholder="Enter another binary number">
-            <button>Convert</button>
-            <textarea name="result" id="result"></textarea>
-        </div>
 
-        <div class="binary" id="binary">
-            <h3>Binary to Decimal convertion</h3>
+            <label for="binary-input2">Binary Number 2:</label>
+            <input type="text" id="binary-input2" placeholder="Enter another binary number" pattern="[01]*" />
+
+            <button id="calc-convert-btn" type="button">Calculate</button>
+
+            <label for="arith-result">Result:</label>
+            <textarea name="arith-result" id="arith-result" readonly></textarea>
+        </section>
+
+        <section class="binary" id="binary">
+            <h3>Binary to Decimal Conversion</h3>
             <p>Enter a binary number:</p>
-            <input type="text" id="binary-to-decimal-input" placeholder="Enter binary number">
-            <button>Convert</button>
-            <textarea name="result" id="result"></textarea>
-        </div>
 
-        <div class="decimal" id="decimal">
-            <h3>Decimal to Binary convertion</h3>
+            <label for="binary-to-decimal-input">Binary Number:</label>
+            <input type="text" id="binary-to-decimal-input" placeholder="Enter binary number" pattern="[01]*" />
+
+            <button id="bin-to-dec-btn" type="button">Convert</button>
+
+            <label for="bin-dec-result">Result:</label>
+            <textarea name="bin-dec-result" id="bin-dec-result" readonly></textarea>
+        </section>
+
+        <section class="decimal" id="decimal">
+            <h3>Decimal to Binary Conversion</h3>
             <p>Enter a decimal number:</p>
-            <input type="text" id="decimal-to-binary-input" placeholder="Enter decimal number">
-            <button>Convert</button>
-            <textarea name="result" id="result"></textarea>
-        </div>
+
+            <label for="decimal-to-binary-input">Decimal Number:</label>
+            <input type="number" id="decimal-to-binary-input" placeholder="Enter decimal number" min="0" />
+
+            <button id="dec-to-bin-btn" type="button">Convert</button>
+
+            <label for="dec-bin-result">Result:</label>
+            <textarea name="dec-bin-result" id="dec-bin-result" readonly></textarea>
+        </section>
+
+        <section class="ascii" id="ascii-section" style="display:none;">
+    <h3>ASCII Table</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Binary Code</th>
+                <th>HTML Number</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody id="ascii-table-body">
+            <!-- Insert rows dynamically via JS or static rows here -->
+            <tr><td>0</td><td>00110000</td><td>&#48;</td><td>Digit Zero</td></tr>
+            <tr><td>A</td><td>01000001</td><td>&#65;</td><td>Uppercase A</td></tr>
+            <tr><td>a</td><td>01100001</td><td>&#97;</td><td>Lowercase a</td></tr>
+            <!-- Add more rows -->
+        </tbody>
+    </table>
+</section>
 
     </main>
 
