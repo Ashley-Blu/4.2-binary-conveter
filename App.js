@@ -62,6 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
         decBinResult.value = result;
     });
 
+    window.onload = function () {
+        populateAsciiTable();
+        document.getElementById('ascii-section').style.display = 'none';
+        document.getElementById('arithmetic').style.display = 'block';
+        document.getElementById('binary').style.display = 'none';
+        document.getElementById('decimal').style.display = 'none';
+    }
+
     // From Binary to Decimal
     const binToDecInput = document.getElementById('binary-to-decimal-input');
     const binToDecBtn = document.getElementById('bin-to-dec-btn');
@@ -171,24 +179,24 @@ function populateAsciiTable() {
     });
 }
 
-window.onload = function() {
+window.onload = function () {
     populateAsciiTable();
 };
 
-document.getElementById('ascii-btn').addEventListener('click', function() {
+document.getElementById('ascii-btn').addEventListener('click', function () {
     document.getElementById('ascii-section').style.display = 'block';
     document.getElementById('arithmetic').style.display = 'none';
     document.getElementById('binary').style.display = 'none';
     document.getElementById('decimal').style.display = 'none';
 });
 
-document.getElementById('binary-btn').addEventListener('click', function() {
+document.getElementById('binary-btn').addEventListener('click', function () {
     document.getElementById('ascii-section').style.display = 'none';
     document.getElementById('arithmetic').style.display = 'none';
     document.getElementById('binary').style.display = 'block';
     document.getElementById('decimal').style.display = 'none';
 });
-document.getElementById('decimal-btn').addEventListener('click', function() {
+document.getElementById('decimal-btn').addEventListener('click', function () {
     document.getElementById('ascii-section').style.display = 'none';
     document.getElementById('arithmetic').style.display = 'none';
     document.getElementById('binary').style.display = 'none';
@@ -196,7 +204,7 @@ document.getElementById('decimal-btn').addEventListener('click', function() {
     populateAsciiTable(); // Make sure this function is defined as shown previously
 });
 
-document.getElementById('home-btn').addEventListener('click', function() {
+document.getElementById('home-btn').addEventListener('click', function () {
     document.getElementById('ascii-section').style.display = 'none';
     document.getElementById('arithmetic').style.display = 'block';
     document.getElementById('binary').style.display = 'none';
